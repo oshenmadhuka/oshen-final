@@ -36,7 +36,7 @@ function Model() {
   
   return (
     <div className="modM">
-      <h1>Employee Attendance Prediction</h1>
+      <h2>Employee Attendance Prediction</h2>
       <label>Date (MMDD): </label>
       <input type="text" value={date} onChange={handleDateChange} />
       <button onClick={handlePredictClick}>Predict</button>
@@ -48,7 +48,6 @@ function Model() {
         </div>
       )}
       <div>
-        <h1>Predicted Attendance Chart</h1>
         <Chart xArray={chartData.map(data => data.date)} yArray={chartData.map(data => data.predicted_attendance)} />
       </div>
       
