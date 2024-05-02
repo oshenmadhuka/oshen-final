@@ -16,7 +16,7 @@ export default function AccountLogin() {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/token', {
+            const response = await axios.get('https://polite-glacier-0649dff0f.5.azurestaticapps.net/token', {
                 params: {
                     username: username,
                     password: password,
