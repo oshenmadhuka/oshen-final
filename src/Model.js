@@ -15,11 +15,11 @@ function Model() {
 
   const handlePredictClick = async () => {
     try {
-      const predictionResponse = await axios.post('https://polite-glacier-0649dff0f.5.azurestaticapps.net/predict/', { date });
+      const predictionResponse = await axios.post('https://oshenbackend.azurewebsites.net/predict/', { date });
       setPrediction(predictionResponse.data.predicted_attendance.toFixed(2)); // Rounded to 2 decimal places
       setError(null);
 
-      const chartResponse = await axios.post('https://polite-glacier-0649dff0f.5.azurestaticapps.net/predict/chart/', { date });
+      const chartResponse = await axios.post('https://oshenbackend.azurewebsites.net/predict/chart/', { date });
       setChartData(chartResponse.data);
     } catch (error) {
       if (error.response) {
